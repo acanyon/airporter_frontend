@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './js/views/App';
 
 function renderApp() {
-  const wrapper = document.getElementById("trend_app");
+  const wrapper = document.getElementById("airporter_app");
   wrapper ? ReactDOM.render(<App />, wrapper) : false;
 }
 

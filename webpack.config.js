@@ -3,6 +3,11 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: ["./src/index.jsx"],
+  output: {
+    path: __dirname,
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
   module: {
     rules: [
       {
@@ -20,7 +25,28 @@ module.exports = {
             loader: "html-loader"
           }
         ]
-      }
+      },
+      {
+        test: /\.(png|jpg)$/,
+        include: path.resolve(__dirname, "src/assets"),
+        use: {
+          loader: "file-loader",
+        },
+      },
+      {
+        test: /\.(svg)$/,
+        use: [
+          {
+            loader: "babel-loader"
+          },
+          {
+            loader: "react-svg-loader",
+            options: {
+              jsx: true // true outputs JSX tags
+            }
+          }
+        ],
+      },
     ]
   },
   resolve: {
