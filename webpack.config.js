@@ -12,11 +12,10 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         include: [
-          __dirname,
+          path.resolve(__dirname, 'src')
         ],
-        exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
         }
       },
       {
@@ -46,6 +45,17 @@ module.exports = {
               jsx: true // true outputs JSX tags
             }
           }
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
         ],
       },
     ]
