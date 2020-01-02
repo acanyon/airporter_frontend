@@ -2,17 +2,18 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: ["./src/index.jsx"],
+  entry: ["./src/index.js"],
   output: {
-    path: __dirname,
-    publicPath: '/',
+    path: path.resolve(__dirname, "src"),
     filename: 'bundle.js'
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        include: path.resolve(__dirname, "src"),
+        include: [
+          __dirname,
+        ],
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -52,6 +53,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
     modules: [
+      __dirname,
       path.join(__dirname, "src"),
       path.join(__dirname, "node_modules"), // the old 'fallback' option (needed for npm link-ed packages)
     ],
