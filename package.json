@@ -33,6 +33,7 @@
     "@types/react": "^16.9.17",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "cjs": "0.0.11",
     "css-loader": "^3.3.0",
     "express": "^4.17.1",
