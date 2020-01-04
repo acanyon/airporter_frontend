@@ -7,7 +7,7 @@
     "url": "git@github.com:acanyon/airporter_frontend.git"
   },
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=8.17.0"
   },
   "engineStrict": true,
   "main": "./src/index.jsx",
