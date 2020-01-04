@@ -1,0 +1,40 @@
+$red: #D71717;
+$darkRed: #A91212;
+
+@mixin title {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@mixin input {
+  box-sizing: border-box;
+  border: 1px solid black;
+
+  &:focus {
+    border: 3px solid black;
+    outline: none;
+  }
+}
+
+@mixin button {
+  @include title;
+  border: 3px solid $red;
+  background-color: $red;
+  color: white;
+  cursor: pointer;
+  min-width: 105px;
+  outline: none;
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+
+  &:hover {
+    border: 3px solid $darkRed;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+

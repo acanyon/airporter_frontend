@@ -1,65 +1,61 @@
+@import '../styles/plugins';
+
 .header {
-  background-color: #D71717;
+  background-color: $red;
   padding: 20px 100px 20px;
-  border-bottom: 5px solid #a91212;
+  border-bottom: 5px solid $darkRed;
   display: flex;
   justify-content: space-between;
 }
+
 .body {
   margin-top: 100px;
 }
+
 .container {
   display: flex;
   width: 800px;
   justify-content: space-between;
   margin: auto;
 }
+
 .navigational {
+  @include title;
   color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
   vertical-align: bottom;
   padding-top: 27px;
 }
+
 .column {
   width: 50%;
 }
+
 .flightSubmission {
-  background-color: #D71717;
+  background-color: $red;
   padding: 20px;
 }
+
 .flightSubmissionContainer {
   background: white;
-  border: 5px solid #a91212;
+  border: 5px solid $darkRed;
   padding: 15px;
 }
+
 .formTitle {
+  @include title;
   text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
+
 .input {
+  @include input;
   width: 100%;
-  box-sizing: borderBox;
-  border: 1px solid black;
 }
+
 .formSubmitButton {
-  border: none;
-  background-color: #D71717;
-  color: white;
+  @include button;
   width: 100%;
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 1px;
-  min-width: 105px;
-  outline: none;
-  padding: 10px 20px;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
 }
+
 .heroImage {
   width: 100%;
   width: 100%;
