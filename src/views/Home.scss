@@ -1,0 +1,62 @@
+@import '../styles/plugins';
+
+.body {
+  margin-top: 100px;
+}
+
+.container {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.column {
+  width: 50%;
+  position: relative;
+}
+
+.flightSubmission {
+  background-color: $red;
+  padding: 20px;
+}
+
+.flightSubmissionContainer {
+  background: white;
+  border: 5px solid $darkRed;
+  padding: 15px;
+}
+
+.formTitle {
+  @include title;
+  text-align: center;
+}
+
+.input {
+  @include input;
+  width: 100%;
+}
+
+.formSubmitButton {
+  @include button;
+  width: 100%;
+}
+
+.heroText {
+  @include title;
+  background-color: #ffffff94;
+  font-size: 30px;
+  padding: 40px;
+  position: absolute;
+  text-align: center;
+  top: 60px;
+}
+
+.heroImage {
+  width: 100%;
+  width: 100%;
+  margin-top: -90px;
+  margin-left: 50p
+}
+
+
