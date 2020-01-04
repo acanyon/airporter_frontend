@@ -48,20 +48,35 @@ module.exports = {
         ],
       },
       {
+        test: /\.css$/i,
+        use: [
+          'css-loader',
+        ],
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
-          'css-loader',
-          // Compiles Sass to CSS
+          {
+            loader: 'style-loader',
+            options: { injectType: 'styleTag' }
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                mode: 'local',
+                localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                context: path.resolve(__dirname, 'src'),
+              },
+            },
+          },
           'sass-loader',
         ],
       },
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.scss'],
     modules: [
       __dirname,
       path.join(__dirname, "src"),

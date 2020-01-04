@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './js/views/App';
-import styles from './style.scss';
+import App from './views/App';
 
 function renderApp() {
   const wrapper = document.getElementById("airporter_app");
