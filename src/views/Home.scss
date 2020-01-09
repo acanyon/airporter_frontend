@@ -21,14 +21,25 @@
   text-align: center;
 }
 
-.input {
-  @include input;
-  width: 100%;
+.inputRow {
+  display: flex;
 }
 
-.formSubmitButton {
-  @include button;
-  width: 100%;
+.input {
+  @include input;
+}
+
+.inputDateContainer {
+  margin-left: 10px;
+  flex-grow: 0 0 auto;
+  width: 150px;
+}
+
+.flightSubmission {
+  .formSubmitButton {
+    @include button;
+    width: 100%;
+  }
 }
 
 .heroText {

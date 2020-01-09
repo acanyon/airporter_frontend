@@ -26,9 +26,9 @@ class App extends Component {
               <AirporterLogo />
               <div className={styles.navigational}>
                 <Link to="/">travel</Link>
-                - 
+                <div className={styles.linkSpacer} />
                 <Link to="/hotels">hotel</Link>
-                -
+                <div className={styles.linkSpacer} />
                 <Link to="/rental_cars">rental cars</Link>
               </div>
             </div>

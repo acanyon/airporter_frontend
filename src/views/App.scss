@@ -2,6 +2,7 @@
 
 .body {
   background-color: $tan;
+  font-family: "Helvetica", sans-serif;
 }
 
 .header {
@@ -9,6 +10,14 @@
   padding: 20px 100px 20px;
   display: flex;
   justify-content: space-between;
+}
+
+.linkSpacer {
+  display: inline-block;
+  &:before {
+    content: '-';
+    padding: 0 5px;
+  }
 }
 
 .container {
@@ -22,7 +31,7 @@
   @include title;
   color: white;
   vertical-align: bottom;
-  padding-top: 27px;
+  padding-top: 28px;
 }
 
 .footer {

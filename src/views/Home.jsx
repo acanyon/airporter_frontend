@@ -11,8 +11,10 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      departure: 'San Francisco',
-      arrival: 'San Diego',
+      departureCity: 'San Francisco',
+      departureDate: '8/29/2020',
+      returnCity: 'San Diego',
+      returnDate: '8/31/2020',
       passengers: '1',
     };
   }
@@ -24,19 +26,37 @@ class Home extends Component {
           <div className={styles.formTitle}>Search Travel Availability</div>
           <br/>
           <div>Departure</div>
-          <input
-            className={styles.input}
-            value={this.state.departure}
-            onChange={event => this.setState({departure: event.currentTarget.value})}
-          />
+          <div className={styles.inputRow}>
+            <input
+              className={styles.input}
+              value={this.state.departureCity}
+              onChange={event => this.setState({departureCity: event.currentTarget.value})}
+            />
+            <div className={styles.inputDateContainer}>
+              <input
+                className={styles.input}
+                value={this.state.departureDate}
+                onChange={event => this.setState({departureDate: event.currentTarget.value})}
+              />
+            </div>
+          </div>
           <br/>
           <br/>
-          <div>Arrival</div>
-          <input
-            className={styles.input}
-            value={this.state.arrival}
-            onChange={event => this.setState({arrival: event.currentTarget.value})}
-          />
+          <div>Return</div>
+          <div className={styles.inputRow}>
+            <input
+              className={styles.input}
+              value={this.state.returnCity}
+              onChange={event => this.setState({returnCity: event.currentTarget.value})}
+            />
+            <div className={styles.inputDateContainer}>
+              <input
+                className={styles.input}
+                value={this.state.returnDate}
+                onChange={event => this.setState({returnDate: event.currentTarget.value})}
+              />
+            </div>
+          </div>
           <br/>
           <br/>
           <div>Passenger Count</div>

@@ -10,7 +10,7 @@ class Blog extends Component {
 
   renderArticle(i) {
     return (
-      <div className={styles.blogArticle}>
+      <div className={styles.blogArticle} key={i}>
         <img className={styles.blogImage} src="/src/assets/womanTraveling.jpg" />
         <div className={styles.blogText} style={i % 2 ? {order: -1} : {}}>
           <div className={styles.blogTitle}>Lorum ipsum</div>

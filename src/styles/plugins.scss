@@ -14,15 +14,18 @@ $bodyWidth: 800px;
 }
 
 @mixin input {
-  box-sizing: border-box;
   border: 1px solid black;
-  padding: 5px 10px;
+  box-sizing: border-box;
+  flex-grow: 1 1 auto;
   margin: 2px 0;
+  padding: 5px 10px;
+  width: 100%;
 
   &:focus {
     border: 3px solid black;
     outline: none;
-    margin: 0;
+    margin: 0 -2px;
+    width: calc(100% + 4px);
   }
 }
 
@@ -40,6 +43,7 @@ $bodyWidth: 800px;
 
   &:hover {
     border: 3px solid $darkRed;
+    text-decoration: none;
   }
 
   &:focus {
