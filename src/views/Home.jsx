@@ -21,7 +21,7 @@ class Home extends Component {
 
   renderForm() {
     return (
-      <div className={styles.flightSubmission}>
+      <form className={styles.flightSubmission}>
         <div className={styles.flightSubmissionContainer}>
           <div className={styles.formTitle}>Search Travel Availability</div>
           <br/>
@@ -72,7 +72,7 @@ class Home extends Component {
           <br/>
           <br/>
         </div>
-      </div>
+      </form>
     );
   }
         
