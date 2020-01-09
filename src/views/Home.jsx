@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+import Blog from './Blog';
 
 import AirporterLogo from '../assets/airporter_logo_white.svg';
 
@@ -44,7 +47,10 @@ class Home extends Component {
           />
           <br/>
           <br/>
-          <button className={styles.formSubmitButton}>GO!</button>
+          <br/>
+          <Link to="/travel_results" className={styles.formSubmitButton}>GO!</Link>
+          <br/>
+          <br/>
         </div>
       </div>
     );
@@ -52,16 +58,16 @@ class Home extends Component {
         
   render() {
     return (
-      <div className={styles.body}>
-        <div className={styles.container}>
-          <div className={styles.column}>
-            {this.renderForm()}
-          </div>
-          <div className={styles.column}>
+      <div>
+        <div className={styles.body}>
+          <div className={styles.container}>
             <div className={styles.heroText}>The reolvutionary portal airport.</div>
-            <img className={styles.heroImage} src="/src/assets/womanTraveling.jpg" />
+            <div className={styles.column}>
+              {this.renderForm()}
+            </div>
           </div>
         </div>
+        <Blog />
       </div>
     );
   }

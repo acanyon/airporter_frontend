@@ -52,6 +52,12 @@ module.exports = {
         ],
       },
       {
+        test: /\.css/i,
+        use: [
+          'css-loader',
+        ],
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           {

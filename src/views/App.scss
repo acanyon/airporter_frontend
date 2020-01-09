@@ -1,16 +1,19 @@
 @import '../styles/plugins';
 
+.body {
+  background-color: $tan;
+}
+
 .header {
   background-color: $red;
   padding: 20px 100px 20px;
-  border-bottom: 5px solid $darkRed;
   display: flex;
   justify-content: space-between;
 }
 
 .container {
   display: flex;
-  width: 800px;
+  width: $bodyWidth;
   justify-content: space-between;
   margin: auto;
 }
@@ -22,3 +25,8 @@
   padding-top: 27px;
 }
 
+.footer {
+  background-color: $gray;
+  padding: 50px 0;
+  text-align: center;
+}

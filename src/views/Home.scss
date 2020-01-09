@@ -1,24 +1,13 @@
 @import '../styles/plugins';
 
 .body {
-  margin-top: 100px;
+  background-color: $red;
 }
 
 .container {
-  display: flex;
-  width: 800px;
-  justify-content: space-between;
+  max-width: $bodyWidth;
   margin: auto;
-}
-
-.column {
-  width: 50%;
-  position: relative;
-}
-
-.flightSubmission {
-  background-color: $red;
-  padding: 20px;
+  padding-bottom: 30px;
 }
 
 .flightSubmissionContainer {
@@ -44,12 +33,10 @@
 
 .heroText {
   @include title;
-  background-color: #ffffff94;
+  color: $white;
   font-size: 30px;
   padding: 40px;
-  position: absolute;
   text-align: center;
-  top: 60px;
 }
 
 .heroImage {

@@ -1,0 +1,30 @@
+@import '../styles/plugins';
+
+.body {
+  display: block;
+  max-width: $bodyWidth;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.blogArticle {
+  background: $white;
+  box-shadow: 0px 1px 5px $shadow;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: 'space-between';
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.blogImage {
+  width: 30%;
+}
+
+.blogText {
+  padding: 20px;
+}
+
+.blogTitle {
+  @include title;
+}
