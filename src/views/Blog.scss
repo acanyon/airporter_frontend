@@ -22,9 +22,11 @@
 }
 
 .blogText {
-  padding: 20px;
+  padding: 30px 50px;
+  line-height: 1.3;
 }
 
 .blogTitle {
   @include title;
+  padding-bottom: 20px;
 }

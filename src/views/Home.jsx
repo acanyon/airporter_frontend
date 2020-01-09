@@ -11,9 +11,9 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      departure: '',
-      arrival: '',
-      passengers: '',
+      departure: 'San Francisco',
+      arrival: 'San Diego',
+      passengers: '1',
     };
   }
 
@@ -61,7 +61,7 @@ class Home extends Component {
       <div>
         <div className={styles.body}>
           <div className={styles.container}>
-            <div className={styles.heroText}>The reolvutionary portal airport.</div>
+            <div className={styles.heroText}>The reolvutionary portal airport</div>
             <div className={styles.column}>
               {this.renderForm()}
             </div>
