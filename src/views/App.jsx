@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 import AirporterLogo from '../assets/airporter_logo_white.svg';
 import Home from './Home';
+import Blog from './Blog';
 import TravelResults from './TravelResults';
+import NoRoute404 from './NoRoute404';
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,28 +25,34 @@ class App extends Component {
         <Router>
           <div className={styles.header}>
             <div className={styles.container}>
-              <AirporterLogo />
+              <Link to="/"><AirporterLogo /></Link>
               <div className={styles.navigational}>
                 <Link to="/">travel</Link>
                 <div className={styles.linkSpacer} />
-                <Link to="/hotels">hotel</Link>
-                <div className={styles.linkSpacer} />
-                <Link to="/rental_cars">rental cars</Link>
+                <Link to="/blog">blog</Link>
               </div>
             </div>
           </div>
-          <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-            <Route path="/travel_results">
-              <TravelResults />
-            </Route>
-          </Switch>
+          <div className={styles.content}>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/blog">
+                <Blog />
+              </Route>
+              <Route path="/travel_results">
+                <TravelResults />
+              </Route>
+              <Route>
+                <NoRoute404 />
+              </Route>
+            </Switch>
+          </div>
+          <div className={styles.footer}>
+            Airporter
+          </div>
         </Router>
-        <div className={styles.footer}>
-          Airporter
-        </div>
       </div>
     );
   }

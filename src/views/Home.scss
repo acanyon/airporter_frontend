@@ -5,8 +5,7 @@
 }
 
 .container {
-  max-width: $bodyWidth;
-  margin: auto;
+  @include contentWrapper;
   padding-bottom: 30px;
 }
 
@@ -27,12 +26,13 @@
 
 .input {
   @include input;
+  font-size: 24px;
 }
 
 .inputDateContainer {
   margin-left: 10px;
   flex-grow: 0 0 auto;
-  width: 150px;
+  width: 200px;
 }
 
 .flightSubmission {
@@ -46,7 +46,7 @@
   @include title;
   color: $white;
   font-size: 30px;
-  padding: 40px;
+  padding: 40px 0;
   text-align: center;
 }
 

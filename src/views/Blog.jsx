@@ -11,10 +11,14 @@ class Blog extends Component {
   renderArticle(i) {
     return (
       <div className={styles.blogArticle} key={i}>
-        <img className={styles.blogImage} src="/src/assets/womanTraveling.jpg" />
+        <div className={styles.blogImageContainer}>
+          <img className={styles.blogImage} src="/src/assets/womanTraveling.jpg" />
+        </div>
         <div className={styles.blogText} style={i % 2 ? {order: -1} : {}}>
           <div className={styles.blogTitle}>Lorum ipsum</div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt est ligula, sit amet interdum quam maximus vitae. Nulla at orci ut velit vestibulum elementum quis ut velit. Pellentesque neque felis, cursus ac ultricies in, molestie quis dui. Phasellus rhoncus, ligula at dapibus suscipit, mi leo pretium felis, ut dignissim ipsum eros volutpat nibh. Fusce id ultrices leo, et dignissim eros. Morbi dapibus lorem sed est varius, sit amet aliquam augue lobortis. Sed imperdiet sagittis tellus vel condimentum. Etiam maximus eros vel ante imperdiet posuere. Nam nibh nisi, interdum vel blandit sed, vestibulum ut risus. In at augue tincidunt, rhoncus velit ut, rutrum mauris.
+          <div className={styles.blogBody}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt est ligula, sit amet interdum quam maximus vitae. Nulla at orci ut velit vestibulum elementum quis ut velit. Pellentesque neque felis, cursus ac ultricies in, molestie quis dui. Phasellus rhoncus, ligula at dapibus suscipit, mi leo pretium felis, ut dignissim ipsum eros volutpat nibh. Fusce id ultrices leo, et dignissim eros. Morbi dapibus lorem sed est varius, sit amet aliquam augue lobortis. Sed imperdiet sagittis tellus vel condimentum. Etiam maximus eros vel ante imperdiet posuere. Nam nibh nisi, interdum vel blandit sed, vestibulum ut risus. In at augue tincidunt, rhoncus velit ut, rutrum mauris.
+          </div>
         </div>
       </div>
     );

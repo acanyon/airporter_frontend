@@ -13,6 +13,12 @@ $bodyWidth: 800px;
   letter-spacing: 1px;
 }
 
+@mixin contentWrapper {
+  max-width: $bodyWidth + 40px;
+  padding: 0 20px;
+  margin: auto;
+}
+
 @mixin input {
   border: 1px solid black;
   box-sizing: border-box;

@@ -3,13 +3,20 @@
 .body {
   background-color: $tan;
   font-family: "Helvetica", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
   background-color: $red;
-  padding: 20px 100px 20px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 .linkSpacer {
@@ -21,10 +28,10 @@
 }
 
 .container {
+  @include contentWrapper;
   display: flex;
-  width: $bodyWidth;
   justify-content: space-between;
-  margin: auto;
+  flex: 1 1 auto;
 }
 
 .navigational {
@@ -32,6 +39,7 @@
   color: white;
   vertical-align: bottom;
   padding-top: 28px;
+  text-align: right;
 }
 
 .footer {

@@ -1,10 +1,7 @@
 @import '../styles/plugins';
 
 .body {
-  display: block;
-  max-width: $bodyWidth;
-  margin: auto;
-  padding: 50px 0;
+  @include contentWrapper;
 }
 
 .blogArticle {
@@ -12,18 +9,27 @@
   box-shadow: 0px 1px 5px $shadow;
   box-sizing: border-box;
   display: flex;
-  justify-content: 'space-between';
   overflow: hidden;
   margin: 30px 0;
+  height: 300px;
+}
+
+.blogImageContainer {
+  margin: 30px;
+  width: 30%;
+  overflow: hidden;
 }
 
 .blogImage {
-  width: 30%;
+  width: 100%;
+  height: auto;
 }
 
 .blogText {
-  padding: 30px 50px;
+  margin: 30px 50px;
   line-height: 1.3;
+  overflow: hidden;
+  width: 70%;
 }
 
 .blogTitle {

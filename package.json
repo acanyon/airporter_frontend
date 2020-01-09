@@ -12,7 +12,7 @@
   "engineStrict": true,
   "main": "./src/index.jsx",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open --mode development --history-api-fallback",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
