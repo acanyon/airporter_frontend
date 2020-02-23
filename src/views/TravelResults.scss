@@ -1,0 +1,38 @@
+@import '../styles/plugins';
+
+.container {
+  @include contentWrapper;
+  padding-bottom: 30px;
+}
+
+.travelResults {
+  border: 5px solid $darkRed;
+  background-color: $white;
+  padding: 30px;
+}
+
+.title {
+  @include title;
+  font-size: 24px;
+}
+
+.flights {
+  padding-top: 30px;
+}
+
+.table {
+  @include table;
+  width: 100%;
+  box-sizing: border-box;
+
+  tr td:last-child {
+    text-align: right;
+  }
+}
+
+.selectTrip {
+  @include button;
+  width: 100px;
+  display: inline-block;
+  margin: 5px 0;
+}

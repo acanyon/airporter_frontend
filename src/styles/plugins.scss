@@ -1,5 +1,5 @@
-$red: #D71717;
-$darkRed: #A91212;
+$red: #C70C0C;
+$darkRed: #960A0A;
 $tan: #f0efec;
 $shadow: #D7D5CD;
 $gray: #D2D1CD;
@@ -68,3 +68,9 @@ $bodyWidth: 800px;
   }
 }
 
+@mixin table {
+  tr th {
+    @include title;
+    text-align: left;
+  }
+}
