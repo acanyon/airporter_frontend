@@ -99,7 +99,7 @@ class TravelResults extends Component {
         {this.state.departingId ? (
           <div className={styles.travelResults}>
             {this.renderTripTable(
-              [trips.filter(trip => trip.id === this.state.departingId)],
+              trips.filter(trip => trip.id === this.state.departingId),
               {isDeparting: true}
             )}
           </div>
