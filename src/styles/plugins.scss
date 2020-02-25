@@ -58,6 +58,10 @@ $bodyWidth: 800px;
   position: relative;
   text-align: center;
 
+  &:link, &:visited {
+    color: white;
+  }
+
   &:hover {
     border: 3px solid $darkRed;
     text-decoration: none;

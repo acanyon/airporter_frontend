@@ -25,14 +25,36 @@
   width: 100%;
   box-sizing: border-box;
 
-  tr td:last-child {
-    text-align: right;
+  tr td {
+    height: 45px;
+    vertical-align: middle;
   }
+}
+
+.rightAlign {
+  text-align: right;
 }
 
 .selectTrip {
   @include button;
   width: 100px;
   display: inline-block;
-  margin: 5px 0;
+
+  &:not(.selected) {
+    background-color: $gray;
+    border: 3px solid $gray;
+    &:hover {
+      border: 3px solid $darkRed;
+    }
+  }
+
+  &:hover {
+    background-color: $red;
+  }
+}
+
+.confirmTravel {
+  @include button;
+  width: 170px;
+  display: inline-block;
 }

@@ -4,6 +4,7 @@ import AirporterLogo from '../assets/airporter_logo_white.svg';
 import Home from './Home';
 import Blog from './Blog';
 import TravelResults from './TravelResults';
+import PaymentDetails from './PaymentDetails';
 import NoRoute404 from './NoRoute404';
 import {
   BrowserRouter as Router,
@@ -43,6 +44,9 @@ class App extends Component {
               </Route>
               <Route path="/travel_results">
                 <TravelResults />
+              </Route>
+              <Route path="/payment_details">
+                <PaymentDetails />
               </Route>
               <Route>
                 <NoRoute404 />

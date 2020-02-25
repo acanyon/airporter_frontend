@@ -1,0 +1,13 @@
+@import '../styles/plugins';
+
+.container {
+  @include contentWrapper;
+  padding-bottom: 30px;
+}
+
+.paymentDetails {
+  border: 5px solid $darkRed;
+  background-color: $white;
+  padding: 30px;
+}
+
