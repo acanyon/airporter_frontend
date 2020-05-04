@@ -91,7 +91,7 @@ class Home extends Component {
           <br/>
           <br/>
           <br/>
-          <Link to="/travel_results" className={styles.formSubmitButton}>Search</Link>
+          <Link to={{pathname: "/travel_results", state: this.state}} className={styles.formSubmitButton}>Search</Link>
           <br/>
           <br/>
         </div>

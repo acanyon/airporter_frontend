@@ -12,7 +12,7 @@ class Blog extends Component {
     return (
       <div className={styles.blogArticle} key={i}>
         <div className={styles.blogImageContainer}>
-          <img className={styles.blogImage} src="/src/assets/womanTraveling.jpg" />
+          <img className={styles.blogImage} src="/public/womanTraveling.jpg" />
         </div>
         <div className={styles.blogText} style={i % 2 ? {order: -1} : {}}>
           <div className={styles.blogTitle}>Lorum ipsum</div>

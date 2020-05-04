@@ -1,1 +1,4 @@
-npm start
+npm start -- compiles frontend with watch
+nodemon server.js -- runs server
+
+run `npm install` first on clone
